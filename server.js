@@ -8,10 +8,15 @@ const PORT = 3000;
 
 app.use((req, res, next) => {
     console.log("Middleware is running");
+    next();
 });
 
+app.get("/", (req, res) => {
+    res.send("Base");
+})
+
 // Read
-app.get("/api/products", (req, res) => {
+app.get("/products", (req, res) => {
     res.json(products);
 });
 
@@ -24,19 +29,19 @@ app.get("/api/users", (req, res) => {
 });
 
 // Update
-app.put("./api/products", (req, res) => {
-    req.body;
+app.put("/api/products", (req, res) => {
+    console.log("Update")
 });
 
 // Create
-app.post("./api/products", (req, res) => {
-    req.body;
-})
+app.post("/api/products", (req, res) => {
+    console.log("Post");
+});
 
 // Delete
-app.delete("./api/reviews", (req, res) => {
-
-})
+app.delete("/api/reviews", (req, res) => {
+    console.log("Delete");
+});
 
 app.listen(PORT, () => {
     console.log(`Server listening on port: ${PORT}.`);
