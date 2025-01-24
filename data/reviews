@@ -1,0 +1,5 @@
+const reviews = {
+    productID: "012a",
+    userID: "0",
+    text: "lorem",
+}
