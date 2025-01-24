@@ -1,6 +1,7 @@
 const express = require("express");
 const products = require("./data/products");
 const reviews = require("./data/reviews");
+const users = require("./data/users");
 
 const app = express();
 const PORT = 3000;

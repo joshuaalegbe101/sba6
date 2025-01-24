@@ -1,5 +1,19 @@
-const reviews = {
-    productID: "012a",
+const reviews = [
+    {
+    productID: "1",
     userID: "0",
     text: "lorem",
-}
+    },
+    {
+    productID: "2",
+    userID: "0",
+    text: "lorem",
+    },
+    {
+    productID: "3",
+    userID: "0",
+    text: "lorem",
+    }
+]
+
+module.exports = reviews;
